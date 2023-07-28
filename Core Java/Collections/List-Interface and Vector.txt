@@ -150,10 +150,10 @@ Important questions for Vector
 5. Does it maintain insertion order ? 
     Yes
 6. Does it maintain sorted order ? 
-    Yes
+    No
 7. Does it offer the random access of elements ? 
     Yes
 8. Is it synchronized ? 
-    Yes
+    Yes // for making array list as synchronised we write like Collections.synchronizedList(array);
 9. What is it good at ? 
     We can use when wehave multi threading in our application and exponetial increase of capacity
