@@ -72,8 +72,19 @@ TreeMap
 5.Collections - Collections is also one of the class in collections framework, which is used to perform the common operations like sorting,filtering on any above specified classes.
 
 Note : added 2 images
+
 Blue color : classes 
 Green color: interfaces
 
 1.Hierarchy of Collections framework (Blue color : classe Green color: interfaces)
 2.Hierarchy of Map interface
+
+
+Major Operations on Collections
+
+1. Creation (of list)
+2. Adding the elements (in to list)
+3. Retrieving the elements (from the list)
+4. Removing the elements (from the list)
+5. Verification/Searching (of the elements)
+6. Updating the elements (in list)

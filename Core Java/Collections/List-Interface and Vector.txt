@@ -1,0 +1,159 @@
+----------------
+List Interface
+----------------
+
+Note : added 1 image
+
+Blue color : classes 
+Green color: interfaces
+
+1.Hierarchy of List interface
+
+Observations from the List interface image
+
+1. There are 4 classes which are implemeting List interface
+    1) ArrayList
+    2)Vector
+    3)Stack
+    4)LinkedList
+2.Array list, Vector, Stack are the classe which are purely implementing only List interface but -->
+3.LinkedList implements both List and Deque interface
+
+Major Operations on List
+
+1. Creation of list
+2. Adding the elements in to list
+3. Retrieving the elements from the list
+4. Removing the elements from the list
+5. Verification/Searching of the elements
+6. Updating the elements in list
+
+---------------------
+ArrayList and Vector
+---------------------
+
+Let we have array with size 5 elements 
+
+ArrayList : It will increase the list size as 50% length 
+            it will take floor value if we get 50% in decimal format
+            Example: 15 now 50% is 7.5 now we can't ass 7.5, it will be 15+7=22
+
+for ex initial length is 10, now 50% means 5 , now the length will be 15
+
+Vector: It will increase the list size as 100% length
+
+for ex initial length is 10, now 100% means 10 , now the length will be 20
+
+
+--------
+Vector
+--------
+
+1. Vector is same as Array/List
+2. The initial size of vector will be 10 an the it increases with 100% size then onwards
+3. Every value of each index initially initialized with null
+4. Every value of vector is an Object ( we are calling a element but it's not normal element it's an object)
+
+-----------------------------------
+Methods Used on Vector Operations
+-----------------------------------
+
+1.Creation of Vector
+
+    Vector v1 = new Vector(); // initial size = 10 and then it increments 100% capacity
+    Vector v2 = new Vector(); // Here v2 is another collection created with inoitial size as 10
+
+Find size and Capacity of the vector
+
+    v1.size(); // no.of elements filled in v1
+    v1.capacity(); // Total capacity of v1
+
+2. Adding elements into the vector
+
+    We can use add() method when you want to add single element 
+    We can use addAll(collectioObject) method when you want to add collection of elements
+
+    1. v1.add(value) // Here value could be any data type
+    2. v1.add(index, value) // Here we can add an value to specified index
+    3. v1.addAll(v2) // Here we are adding v2 elements to end of v1
+    4. v1.addAll(index,v2) // Here we are adding v2 elements to specified index of v1
+
+3. Retrieving the elements from the list
+
+    v1.get(index) // Here we can get the element from specified index
+
+4. Removing the elements from the list
+
+    We can use remove(index/value) method when you want to remove single element/value
+    We can use removeAll(collectioObject) method when you want to remove collection of elements
+    We can use clear() method when you want to remove all elements in particular collection
+
+    1. v1.remove(index) // Here we remove the element from specified index on v1
+    2. v1.remove(value) // Here we can specify the direct value, so that it search and delete that one
+    3. v1.removeAll(v2) // Here we are removing all elements of v2 vector
+    4. v1.clear() // Here we remove all elements of v1 vector
+
+5. Verification/Searching of the elements
+
+    We can use contains(value) method to check whether the value is present in the vector or not
+    We can use containsALL(collectioObject) method to check whether the value is present in the vector or not
+
+    v1.contains(value) // which return true/false based on the presence of the value
+    v1.cotainsAll(v2) // which return true/false based on the presence of the value irrespective of the order which is present in v2
+
+6. Updating the elements in list
+
+    We can use set(index, value) method to update the value in list on specified position
+
+    v1.set(1, "Ganesh")
+
+7. Miscellanious Methods
+		
+	v1.indexOf("Checthu");  // Index of particular element
+	v1.lastIndexOf("Chethu") // Index of last occurence of particular value
+	v1.lastElement(); //Last Element
+	v1.firstElement(); // First Element
+	Object[] array = v1.toArray(); // Convert vector to Array
+	Arrays.toString(array); // we can't print array directly without for loop, for getting entire array
+
+Some more important topics on Vectors
+
+1.The default size on which the vector will create was 10, now if you want to create with 20 then you can do like
+    Vector v1 = new Vector(20); // initial size = 10 and then it increments 100% capacity
+
+2. Let we have array with 5 like [1,2,3,4,5,6] now if you want to create vector with those elements then we have to follow below
+    Object array = new Object[] {1, 5, 8, 9, 2, 6};
+    Vector v1 = new Vector(Arrays.asList(array));  // now the vector default size is 6 not 10.
+
+---------
+Generics 
+---------
+
+Generics are applicable to all types of collections (ArrayList, LL, etc.) and out of collections also
+
+1. Vector<Integer> v1 = new Vector<Integer>();
+2. Vector<Integer> v2 = new Vector<>(); // We can omit the Integer on right side but it is mandatory on left side.
+
+Above means we could only add integers on v1 no other data type will alowed.
+
+--------------------------------
+Important questions for Vector
+--------------------------------
+1. What is the default capacity ? 
+    10
+2. What is the initial capacity ? 
+    10
+3. Does it allow duplicate elements ? 
+    Yes
+4. Does it allow null values ? 
+    Yes
+5. Does it maintain insertion order ? 
+    Yes
+6. Does it maintain sorted order ? 
+    Yes
+7. Does it offer the random access of elements ? 
+    Yes
+8. Is it synchronized ? 
+    Yes
+9. What is it good at ? 
+    We can use when wehave multi threading in our application and exponetial increase of capacity
