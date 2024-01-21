@@ -1,0 +1,13 @@
+-------------------------------------------
+Important questions for every collection 
+-------------------------------------------
+
+1. What is the default capacity ?
+2. What is the initial capacity ?
+3. Does it allow duplicate elements ?
+4. Does it allow null values ?
+5. Does it maintain insertion order ?
+6. Does it maintain sorted order ?
+7. Does it offer the random access of elements ?
+8. Is it synchronized ?
+9. What is it good at ?

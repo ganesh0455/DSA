@@ -1,0 +1,113 @@
+--------
+ArrayList
+--------
+
+1. ArrayList is same as Array/List
+2. The initial size of ArrayList will be 10 , one if you add one element and now the size showed like 10 and then onwards it will increase with 50% size.
+3. Every value of each index initially initialized with null
+4. Every value of ArrayList is an Object ( we are calling a element but it's not normal element it's an object)
+5.It is present in java.util package
+
+-----------------------------------
+Methods Used on ArrayList Operations
+-----------------------------------
+
+1.Creation of ArrayList
+
+    ArrayList<Integer> array = new ArrayList<>(); // initial size = 10 and then it increments 100% capacity
+    ArrayList array2 = new ArrayList(); // Here array2 is another collection created with inoitial size as 10
+
+Find size and Capacity of the ArrayList
+
+    array1.size(); // no.of elements filled in array1
+    array1.capacity(); // Total capacity of array1
+
+2. Adding elements into the ArrayList
+
+    We can use add() method when you want to add single element 
+    We can use addAll(collectioObject) method when you want to add collection of elements
+
+    1. array1.add(value) // Here value could be any data type
+    2. array1.add(index, value) // Here we can add an value to specified index
+    3. array1.addAll(array2) // Here we are adding array2 elements to end of array1
+    4. array1.addAll(index,array2) // Here we are adding array2 elements to specified index of array1
+
+3. Retrieving the elements from the list
+
+    array1.get(index) // Here we can get the element from specified index
+
+4. Removing the elements from the list
+
+    We can use remove(index/value) method when you want to remove single element/value
+    We can use removeAll(collectioObject) method when you want to remove collection of elements
+    We can use clear() method when you want to remove all elements in particular collection
+
+    1. array1.remove(index) // Here we remove the element from specified index on array1
+    2. array1.remove(value) // Here we can specify the direct value, so that it search and delete that one
+    3. array1.removeAll(array2) // Here we are removing all elements of array2 ArrayList
+    4. array1.clear() // Here we remove all elements of array1 ArrayList
+
+5. Verification/Searching of the elements
+
+    We can use contains(value) method to check whether the value is present in the ArrayList or not
+    We can use containsALL(collectioObject) method to check whether the value is present in the ArrayList or not
+
+    array1.contains(value) // which return true/false based on the presence of the value
+    array1.cotainsAll(array2) // which return true/false based on the presence of the value irrespective of the order which is present in array2
+
+6. Updating the elements in list
+
+    We can use set(index, value) method to update the value in list on specified position
+
+    array1.set(1, "Ganesh")
+
+7. Miscellanious Methods
+		
+	array1.indexOf("Checthu");  // Index of particular element
+	array1.lastIndexOf("Chethu") // Index of last occurence of particular value
+	array1.lastElement(); //Last Element
+	array1.firstElement(); // First Element
+	Object[] array = array1.toArray(); // Convert ArrayList to Array
+	Arrays.toString(array); // we can't print array directly without for loop, for getting entire array
+
+Some more important topics on ArrayLists
+
+1.The default size on which the ArrayList will create was 0, now if you want to create with 20 then you can do like
+    ArrayList array1 = new ArrayList(20); // initial size = 10 and then it increments 100% capacity
+
+2. Let we have array with 5 like [1,2,3,4,5,6] now if you want to create ArrayList with those elements then we have to follow below
+    Object array = new Object[] {1, 5, 8, 9, 2, 6};
+    ArrayList array1 = new ArrayList(Arrays.asList(array));  // now the ArrayList default size is 6 not 10.
+
+---------
+Generics 
+---------
+
+Generics are applicable to all types of collections (ArrayList, LL, etc.) and out of collections also
+
+1. ArrayList<Integer> array1 = new ArrayList<Integer>();
+2. ArrayList<Integer> array2 = new ArrayList<>(); // We can omit the Integer on right side but it is mandatory on left side.
+
+Above means we could only add integers on array1 no other data type will alowed.
+
+--------------------------------
+Important questions for ArrayList
+--------------------------------
+1. What is the default capacity ? 
+    0
+2. What is the initial capacity ? 
+    10
+3. Does it allow duplicate elements ? 
+    Yes
+4. Does it allow null values ? 
+    Yes
+5. Does it maintain insertion order ? 
+    Yes
+6. Does it maintain sorted order ? 
+    No
+7. Does it offer the random access of elements ? 
+    Yes
+8. Is it synchronized ? 
+    No
+9. What is it good at ? 
+    We can use when wehave multi threading in our application and exponetial increase of capacity

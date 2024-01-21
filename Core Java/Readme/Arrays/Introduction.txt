@@ -1,0 +1,54 @@
+--------
+Arrays
+--------
+1.For storing multiple values we use arrays.
+2.It is a non-premitive data types.
+3.An array is a container object that holds fixed number of values of single type.
+
+
+Different types of Arrays
+    1.Single Dimensional Arrays
+    2.Multi Dimensional Arrays
+        1.Two Dimensional Arrays
+        2.Jagged Arrays
+
+--------------------------
+Signle Dimentional Arrays
+--------------------------
+
+Defferent ways to declare an Array
+
+    1. int i[];
+    2. int[] j; // Prefered
+
+For giving the size of array we have to create an object for the array.
+
+    1. int[] j = new int[5];  // Here only 5 values are allowed, if you store >5 then it will throwgh an exception called ArrayIndexOutOfBounds Exception
+    2 Array index starts from 0, and the default values are assigned to array indices based on the data type
+        1. If it is int type then the array elements are intialized with 0
+        2. If it is string with then the array elements are intialized with null
+        3. If it is boolean with then the array elements are intialized with false
+
+    3.We can assign the value for particula index like j[0]=1;
+
+Length of the array
+    1. j.lenth method returns the j's array size
+
+Different ways to assign values to array
+    1. If you don't know the what elements you have to assigne and if you want to assign values dinamically the we can assign following 
+        int[] j = new int[5] // declaring array with size 5
+        j[0]=5,
+        j[1]=6;
+
+        or we can use for loop for assign no.of elements
+    2. If you want to access some set of values in declaration itself
+        1. int[] j = {1,2,3,4,5}; // Way 1
+        2. int[] j = new int[] {1,2,3,4,5}; // Way 2 here new int[] is not mandatory
+        3. int[] j; // Way 3 
+            j=new int[] {1,2,3,4,5} // here new int[] is mandatory and the size assigned as 5.
+            j={1,2,3,4,5} // we get invalid syntax error
+
+
+----------------------------------
+Multi dimentional Arrays
+----------------------------------
